@@ -28,6 +28,14 @@ $ docker run -d \
 
 See [docker-compose.yaml](./docker-compose.yaml).
 
+### Install
+
+Go to the following address to finish the installation process
+
+```shell
+http://<ip-address>/install.php
+```
+
 ## Development
 
 See [Wiki](https://github.com/nicholaswilde/docker-chyrp-lite/wiki/Development).
