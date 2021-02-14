@@ -24,6 +24,10 @@ $ docker run -d \
   nicholaswilde/chyrp-lite
 ```
 
+|   user   | uid |
+|:--------:|:---:|
+| www-data |  33 |
+
 ### docker-compose
 
 See [docker-compose.yaml](./docker-compose.yaml).
