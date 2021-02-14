@@ -1,17 +1,15 @@
 ---
 version: "2.1"
 services:
-  installer:
-    image: nicholaswilde/template:latest
-    container_name: template
+  chyrplite:
+    image: nicholaswilde/chyrp-lite:latest
+    container_name: chyrp-lite-default
     ports:
-      - 3000:3000
+      - 80:80
     restart: unless-stopped
     volumes:
-      - app:/app
-      - config:/config
-      - defaults:/defaults
+      - data:/var/www/html/data
+      - html:/var/www/html
 volumes:
-  app:
-  config:
-  defaults:
+  data:
+  html:

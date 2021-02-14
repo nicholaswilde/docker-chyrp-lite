@@ -1,29 +1,27 @@
-# Docker Template
-[![Docker Image Version (latest by date)](https://img.shields.io/docker/v/nicholaswilde/template)](https://hub.docker.com/r/nicholaswilde/template)
-[![Docker Pulls](https://img.shields.io/docker/pulls/nicholaswilde/template)](https://hub.docker.com/r/nicholaswilde/template)
-[![GitHub](https://img.shields.io/github/license/nicholaswilde/docker-template)](./LICENSE)
-[![ci](https://github.com/nicholaswilde/docker-template/workflows/ci/badge.svg)](https://github.com/nicholaswilde/docker-template/actions?query=workflow%3Aci)
-[![lint](https://github.com/nicholaswilde/docker-template/workflows/lint/badge.svg?branch=main)](https://github.com/nicholaswilde/docker-template/actions?query=workflow%3Alint)
+# Docker Chyrp Lite
+[![Docker Image Version (latest by date)](https://img.shields.io/docker/v/nicholaswilde/chyrp-lite)](https://hub.docker.com/r/nicholaswilde/chyrp-lite)
+[![Docker Pulls](https://img.shields.io/docker/pulls/nicholaswilde/chyrp-lite)](https://hub.docker.com/r/nicholaswilde/chyrp-lite)
+[![GitHub](https://img.shields.io/github/license/nicholaswilde/docker-chyrp-lite)](./LICENSE)
+[![ci](https://github.com/nicholaswilde/docker-chyrp-lite/workflows/ci/badge.svg)](https://github.com/nicholaswilde/docker-chyrp-lite/actions?query=workflow%3Aci)
+[![lint](https://github.com/nicholaswilde/docker-chyrp-lite/workflows/lint/badge.svg?branch=main)](https://github.com/nicholaswilde/docker-chyrp-lite/actions?query=workflow%3Alint)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
 
-A template repo for Docker images.
+A multi-architecture image for [Chyrp Lite](https://github.com/xenocrat/chyrp-lite).
 
 ## Dependencies
 
-* None
+* mysql (optional)
 
 ## Usage
 ### docker cli
 
 ```bash
 $ docker run -d \
-  --name=template \
+  --name=chyrp-lite \
   -e TZ=America/Los_Angeles `# optional` \
-  -e PUID=1000  `# optional` \
-  -e PGID=1000   `# optional` \
-  -p 3000:3000 \
+  -p 80:80 \
   --restart unless-stopped \
-  nicholaswilde/template
+  nicholaswilde/chyrp-lite
 ```
 
 ### docker-compose
@@ -32,11 +30,11 @@ See [docker-compose.yaml](./docker-compose.yaml).
 
 ## Development
 
-See [Wiki](https://github.com/nicholaswilde/docker-template/wiki/Development).
+See [Wiki](https://github.com/nicholaswilde/docker-chyrp-lite/wiki/Development).
 
 ## Troubleshooting
 
-See [Wiki](https://github.com/nicholaswilde/docker-template/wiki/Troubleshooting).
+See [Wiki](https://github.com/nicholaswilde/docker-chyrp-lite/wiki/Troubleshooting).
 
 ## Pre-commit hook
 
