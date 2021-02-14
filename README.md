@@ -42,11 +42,11 @@ http://<ip-address>/install.php
 
 ## Development
 
-See [Wiki](https://github.com/nicholaswilde/docker-chyrp-lite/wiki/Development).
+See [Wiki](https://github.com/nicholaswilde/docker-template/wiki/Development).
 
 ## Troubleshooting
 
-See [Wiki](https://github.com/nicholaswilde/docker-chyrp-lite/wiki/Troubleshooting).
+See [Wiki](https://github.com/nicholaswilde/docker-template/wiki/Troubleshooting).
 
 ## Pre-commit hook
 
