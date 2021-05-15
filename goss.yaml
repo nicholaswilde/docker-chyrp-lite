@@ -1,0 +1,14 @@
+---
+port:
+  tcp:80:
+    listening: true
+
+process:
+  apache2:
+    running: true
+
+http:
+  http://localhost/install.php:
+    status: 200
+    body:
+      - <title>Chyrp Lite Installer</title>

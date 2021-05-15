@@ -1,6 +1,6 @@
 FROM ubuntu:20.04 as dl
 ARG VERSION
-ARG CHECKSUM=67832618c815df2735900f32964f40cd1e5a017d418c13c8b604bb7395f06d6a
+ARG CHECKSUM
 ARG FILENAME="${VERSION}.tar.gz"
 WORKDIR /tmp
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
@@ -12,7 +12,7 @@ RUN \
     ca-certificates=20210119~20.04.1 && \
   echo "**** download app ****" && \
   mkdir /app && \
-  wget --no-check-certificate "https://github.com/xenocrat/chyrp-lite/archive/${FILENAME}" && \
+  wget -q --no-check-certificate "https://github.com/xenocrat/chyrp-lite/archive/${FILENAME}" && \
   echo "${CHECKSUM}  ${FILENAME}" | sha256sum -c && \
   tar -xvf "${FILENAME}" --strip-components 1 -C /app
 WORKDIR /app
@@ -27,6 +27,7 @@ RUN \
 FROM php:7.4-apache
 ARG BUILD_DATE
 ARG VERSION
+# hadolint ignore=DL3048
 LABEL build_version="Version:- ${VERSION} Build-date:- ${BUILD_DATE}"
 LABEL maintainer="nicholaswilde"
 RUN \
